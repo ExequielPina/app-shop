@@ -44,9 +44,9 @@
                     <div class="col-md-4">
                         <div class="info">
                             <div class="icon icon-success">
-                                <i class="material-icons">Pago seguro</i>
+                                <i class="material-icons">verified_user</i>
                             </div>
-                            <h4 class="info-title">Second Feature</h4>
+                            <h4 class="info-title">Pago Seguro</h4>
                             <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                             <div class="icon icon-danger">
                                 <i class="material-icons">fingerprint</i>
                             </div>
-                            <h4 class="info-title">Third Feature</h4>
+                            <h4 class="info-title">Información privada.</h4>
                             <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                         <div class="row">
                             <div class="col-md-4 col-md-offset-4 text-center">
                                 <button class="btn btn-primary btn-raised">
-                                    Send Message
+                                   Enviar mensaje
                                 </button>
                             </div>
                         </div>
