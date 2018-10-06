@@ -8,6 +8,7 @@ class ProductController extends Controller
 {
     public function index()
     {
+        $products = Product::all();
         return view('admin.products.index');   // Ver listado de productos
     }
 
