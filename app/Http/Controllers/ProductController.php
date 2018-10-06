@@ -8,7 +8,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        return view('');   // Ver listado de productos
+        return view('admin.products.index');   // Ver listado de productos
     }
 
     public function create()
