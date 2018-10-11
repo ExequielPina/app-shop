@@ -71,8 +71,8 @@
                     @foreach ($products as $product)
                     <div class="col-md-4">
                         <div class="team-player">
-                            <img src="{{ $product->images()->first()->image }}" alt="Thumbnail Image" class="img-raised img-circle">
-                            <h4 class="title">{{ $product->category->name }}<br/>
+                            <img src="{{ $product->images()->first() ? $product->images()->first()->image : 'https://lorempixel.com/250/250/?99836' }}" alt="Thumbnail Image" class="img-raised img-circle">
+                            <h4 class="title">{{ $product->category ? $product->category->name : 'Sin categoría' }}<br/>
                                 <small class="text-muted">Model</small>
                             </h4>
                             <p class="description">{{ $product->description }}</p>
