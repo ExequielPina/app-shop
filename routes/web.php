@@ -17,5 +17,6 @@ Route::get('/admin/products/{id}/edit', 'ProductController@edit'); // formulario
 
 Route::post('/admin/products/{id}/edit', 'ProductController@update'); // actualizar
 
-Route::get('/admin/products/{id}/delete', 'ProductController@destroy'); // Eliminar
+Route::delete('/admin/products/{id}', 'ProductController@destroy'); // Eliminar
+
 

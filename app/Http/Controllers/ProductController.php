@@ -39,15 +39,22 @@ class ProductController extends Controller
     }
 
     public function update(Request $request, $id)
-    {
-        //   dd($request->all());
+    {        
         $product = Product::find($id);
         $product->name = $request->input('name');
         $product->description = $request->input('description');
         $product->price = $request->input('price');
         $product->long_description = $request->input('long_description');
-        $product->save(); // INSERT en table productos
+        $product->save(); // update
 
         return redirect('/admin/products');
+    }
+
+    public function destroy($id)                    
+    {        
+        $product = Product::find($id);       
+        $product->delete(); // delete
+
+        return back();
     }
 }
