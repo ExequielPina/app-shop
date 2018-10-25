@@ -23,9 +23,11 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
 
     Route::get('/products/{id}/images', 'ImageController@index'); 
 
-    Route::post('/products{id}/images', 'imageController@store'); 
+    Route::post('/products/{id}/images', 'ImageController@store'); 
 
-    Route::delete('/products/{id}/images', 'imageController@destroy');
+    Route::delete('/products/{id}/images', 'ImageController@destroy');
+
+    Route::get('/products/{id}/images/select/{image}', 'ImageController@select'); // destacar imagen  
 });
 
 

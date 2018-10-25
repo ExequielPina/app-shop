@@ -71,11 +71,11 @@
                     @foreach ($products as $product)
                     <div class="col-md-4">
                         <div class="team-player">
-                            <img src="{{ $product->images()->first() ? $product->images()->first()->image : 'https://lorempixel.com/250/250/?99836' }}" alt="Thumbnail Image" class="img-raised img-circle">
-                            <h4 class="title">{{ $product->category ? $product->category->name : 'Sin categoría' }}<br/>
-                                <small class="text-muted">Model</small>
+                            <img src="{{ $product->featured_image_url }}" alt="Thumbnail Image" class="img-raised img-circle">
+                            <h4 class="title">{{ $product->name }} <br/>
+                                <small class="text-muted">{{ $product->category->name }}</small>       
                             </h4>
-                            <p class="description">{{ $product->description }}</p>
+                            <p class="description">{{ $product->description }}</p>         
                             <a href="#pablo" class="btn btn-simple btn-just-icon"><i class="fa fa-twitter"></i></a>
                             <a href="#pablo" class="btn btn-simple btn-just-icon"><i class="fa fa-instagram"></i></a>
                             <a href="#pablo" class="btn btn-simple btn-just-icon btn-default"><i class="fa fa-facebook-square"></i></a>
