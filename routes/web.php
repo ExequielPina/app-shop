@@ -7,7 +7,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
+Route::get('/products/{id}', 'ProductController@show'); // formulario de edición
+
+Route::middleware(['auth', 'admin'])->prefix('admin')->namespace('Admin')->group(function () {
 
     Route::get('/products', 'ProductController@index'); // listado
 
@@ -21,11 +23,11 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     
     Route::delete('/products/{id}', 'ProductController@destroy'); // Eliminar
 
-    Route::get('/products/{id}/images', 'ImageController@index'); 
+    Route::get('/products/{id}/images', 'ImageController@index');  // listado
 
-    Route::post('/products/{id}/images', 'ImageController@store'); 
+    Route::post('/products/{id}/images', 'ImageController@store');   // registrar
 
-    Route::delete('/products/{id}/images', 'ImageController@destroy');
+    Route::delete('/products/{id}/images', 'ImageController@destroy');  // form
 
     Route::get('/products/{id}/images/select/{image}', 'ImageController@select'); // destacar imagen  
 });
