@@ -18,6 +18,7 @@
 	<!-- CSS Files -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" /> 
     <link href="{{ asset('css/material-kit.css') }}" rel="stylesheet"/>  
+	@yield('styles')
 
 </head>
 
@@ -53,6 +54,9 @@
                                 </a>
 
                                 <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+									<li>
+										<a href="{{ url('/home') }}">Dashboard</a> 
+									</li>
 									@if (auth()->user()->admin)
 									<li>
 										<a href="{{ url('/admin/products') }}">Gestionar productos</a>
@@ -91,11 +95,9 @@
     	</div>
     </nav>
 
-    <div class="wrapper">
+    <div class="wrapper">        
 		@yield('content')  
     </div>
-
-
 </body>
 	<!--   Core JS Files   -->
 	<script src="{{ asset('js/jquery.min.js')}}" type="text/javascript"></script>
